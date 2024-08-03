@@ -5,7 +5,7 @@ function Login() {
   const [err, setErr] = useState(false);
   const [valid, setValid] = useState(false)
   function loginHandler(e) {
-    if(user.length < 3 || password.length < 6){  
+    if(user.length < 3 || password.length < 3){  
         alert("type of correct Value")
     } 
     else { alert("all Goods")
@@ -26,13 +26,13 @@ function Login() {
 
   function passHandler(e){
    let item = e.target.value;
-    if(item.length < 6){ 
+    if(item.length < 3){ 
         setValid(true)
     }
     else{
      setValid(false)
     }
-    setValid(item)
+    setPassword(item)
   }
 
   return (

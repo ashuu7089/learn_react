@@ -5,6 +5,8 @@ import Profile from './Profile';
 import Doctor from './Doctor';
 import BottleRen from './BottleRen';
 import Login from './Login';
+import PropPass from './PropPass';
+import Member from './Member';
 
 // function App() {
 //   return (
@@ -201,11 +203,29 @@ import Login from './Login';
 
 // Basic Form Validation in React ======================================Validation in React =====================================
 
+// function App(){
+//   return (
+//     <div>
+//       <h1>Basic Form Validation </h1>
+//       < Login />
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+// Pass Props as a Function in React ==============================================Pass Props ====================================
+
 function App(){
+  function getData(){
+    alert("Alter")
+  }
   return (
     <div>
-      <h1>Basic Form Validation </h1>
-      < Login />
+      <h1>Pass Props as a Function </h1>
+      <PropPass data = {getData}/>
+      <Member data = {getData}/> 
     </div>
   )
 }
