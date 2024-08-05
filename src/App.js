@@ -7,6 +7,7 @@ import BottleRen from './BottleRen';
 import Login from './Login';
 import PropPass from './PropPass';
 import Member from './Member';
+import RenderLifeCycle from './RenderLifeCycle';
 
 // function App() {
 //   return (
@@ -217,17 +218,87 @@ import Member from './Member';
 
 // Pass Props as a Function in React ==============================================Pass Props ====================================
 
-function App(){
-  function getData(){
-    alert("Alter")
+// function App(){
+//   function getData(){
+//     alert("Alter")
+//   }
+//   return (
+//     <div>
+//       <h1>Pass Props as a Function </h1>
+//       <PropPass data = {getData}/>
+//       <Member data = {getData}/> 
+//     </div>
+//   )
+// }
+
+// export default App;
+
+// FIRST LIFE CYCLE METHOD in React ==============================================Constructor =====================================
+// IN CLASS COMPONENT FIRST We work
+
+// import React, { Component } from 'react';
+
+// class App extends Component {
+//   constructor(){
+//     super();
+//     this.state = {
+//       data : "ASHU PATERIYA "
+//     }
+//     console.log("FIRST CALL");
+//   }
+//   render() {
+//     console.log("RENDER CALL");
+//     return (
+//       <div>
+//         <h1>First Life Cycle Method  Constructor { this.state.data }</h1>
+//       </div>
+//     )
+//   }
+  
+// }
+
+// export default App;
+
+// RENDER METHOD IN LIFE CYCLE Method ========================================RENDER METHOD=============================
+// import React, { useState } from 'react';
+// function App(){
+//   const [name, setName ] = useState("Ashu")
+//   return(
+//     <div>
+//       <h1>Main File </h1>
+//       < RenderLifeCycle name = {name}/>
+//       <button onClick={()=>setName("Pateriya")}>Update Name</button>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+// COMPONENT DID MOUNT method ===============================================COMPONENT DID MOUNT==========================
+
+import React, { Component } from 'react';
+
+
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      name : "Ashu"
+    }
+    console.log("CONSTRUCTOR");
   }
-  return (
-    <div>
-      <h1>Pass Props as a Function </h1>
-      <PropPass data = {getData}/>
-      <Member data = {getData}/> 
-    </div>
-  )
+  componentDidMount(){
+    console.log("COMPONENT DID MOUNT");
+  }
+  render(){
+    console.log("RENDER");
+    return (
+      <div>
+        <h1>Component Did Mount {this.state.name}</h1>
+        <button onClick={()=> this.setState({name : "Pateriya"})}>Update Name </button>
+      </div>
+    )
+  }
 }
 
 export default App;
