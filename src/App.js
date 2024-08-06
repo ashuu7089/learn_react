@@ -481,45 +481,132 @@ export default App;
 
 // Handle Array with List =============================================Handle Array ======================
 
-import React from 'react';
+/*
+// import React from 'react';
 
-function App(){
-let data = ["aakash", "aashu", "aayushi", "anjali", "rohan"]
-let student = [
-  { name : "Ashu Pateriya", email : "ashu@gmail.com"},
-  { name : "Amit Pateriya", email :  "amit@gmail.com"},
-  { name : "Rakesh Pateriya", email : "rakesh@gmail.com"},
+// function App(){
+// let data = ["aakash", "aashu", "aayushi", "anjali", "rohan"]
+// let student = [
+//   { name : "Ashu Pateriya", email : "ashu@gmail.com"},
+//   { name : "Amit Pateriya", email :  "amit@gmail.com"},
+//   { name : "Rakesh Pateriya", email : "rakesh@gmail.com"},
 
-]
-return (
-    <div>
-         <h1>Handle Array with list</h1>
-         <table border= "2">
+// ]
+// return (
+//     <div>
+//          <h1>Handle Array with list</h1>
+//          <table border= "2">
+//           <tbody>
       
-       <tr> 
-        <td>Name</td>
-        <td>Email</td>
-       </tr>
+//        <tr> 
+//         <td>Name</td>
+//         <td>Email</td>
+//        </tr>
   
-      {/* {
-        data.map((item)=>
-          <h1>Name is : {item}</h1>
-        )
+//       {/* {
+//         data.map((item)=>
+//           <h1>Name is : {item}</h1>
+//         )
        
-      } */}
+      // } */
 
-      {/* FOR ARRAY OF OBJECT  */}
-      {
-        student.map((item)=>
-       <tr> 
-        <td>{item.name}</td>
-        <td>{item.email}</td>
-       </tr>
+//       {/* FOR ARRAY OF OBJECT  */}
+//       {
+//         student.map((item, index)=>
+//        <tr key={index}> 
+//         <td>{item.name}</td>
+//         <td>{item.email}</td>
+//        </tr>
+//         )
+//       }
+//       </tbody>
+//     </table>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+// */
+
+// LIST HANDLE in react=====================================================BOOTSTRAP + TABLE =================================
+
+// import React from 'react';
+// import { Table } from 'react-bootstrap'
+// function App(){
+ 
+//   let student = [
+//       { name : "Ashu Pateriya", email : "ashu@gmail.com"},
+//       { name : "Amit Pateriya", email :  "amit@gmail.com"},
+//       { name : "Rakesh Pateriya", email : "rakesh@gmail.com"},
+//   ]
+//   return (
+//     <div>
+//       <h1>List Handle table + bootstrap </h1>
+//       <Table  striped bordered hove="true" variant='dark'>
+//         <tbody>
+//           <tr>
+//             <td>Name</td>
+//             <td>Email</td>
+//           </tr>
+//       {
+//         student.map((item, index)=>
+//         item.email === "ashu@gmail.com" ?
+//         <tr key={index}>
+//           <td>{item.name}</td>
+//           <td>{item.email}</td>
+//         </tr>: null
+//         )
+//       }
+//       </tbody>
+//       </Table>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+// NESTED LIST IN REACT =======================================================NESTED LIST======================================
+
+import React from 'react';
+import { Table } from 'react-bootstrap'
+function App(){
+const  student = [
+        { name : "Ashu Pateriya", email : "ashu@gmail.com", address : [{HN : 10, City :"Indore"}]},
+        { name : "Amit Pateriya", email :  "amit@gmail.com", address : [{HN : 50, City :"Dewas"}]},
+        { name : "Rakesh Pateriya", email : "rakesh@gmail.com", address : [{HN : 60, City :"KOL"}]},
+    ]
+
+  return(
+    <div>
+      <h1>Nested List in Array</h1>
+    <Table striped  >
+    <tr>
+      <td>Name</td>
+      <td>Email</td>
+      <td>address</td>
+    </tr>
+    </Table>
+    {
+      student.map((item)=>
+        <tr>
+          <td>{item.name}</td>
+          <td>{item.email}</td>
+        item.address.map((data) =>
+        <Table >
+        <tr>
+          <td>{data.HN}</td>
+          <td>{data.City}</td>
+        </tr>
         )
-      }
-    </table>
+      )
+    }
+
+    </Table>
     </div>
   )
 }
 
 export default App;
+
