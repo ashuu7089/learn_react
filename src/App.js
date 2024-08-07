@@ -510,6 +510,7 @@ export default App;
        
       // } */
 
+<<<<<<< HEAD
 //       {/* FOR ARRAY OF OBJECT  */}
 //       {
 //         student.map((item, index)=>
@@ -599,6 +600,15 @@ const  student = [
           <td>{data.HN}</td>
           <td>{data.City}</td>
         </tr>
+=======
+      {/* FOR ARRAY OF OBJECT  */}
+      {
+        student.map((item, index)=>
+       <tr> 
+        <td>{index}={item.name}</td>
+        <td>{index}={item.email}</td>
+       </tr>
+>>>>>>> ed5051e (update App)
         )
       )
     }
