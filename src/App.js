@@ -510,7 +510,6 @@ export default App;
        
       // } */
 
-<<<<<<< HEAD
 //       {/* FOR ARRAY OF OBJECT  */}
 //       {
 //         student.map((item, index)=>
@@ -570,53 +569,53 @@ export default App;
 
 // NESTED LIST IN REACT =======================================================NESTED LIST======================================
 
-import React from 'react';
-import { Table } from 'react-bootstrap'
-function App(){
-const  student = [
-        { name : "Ashu Pateriya", email : "ashu@gmail.com", address : [{HN : 10, City :"Indore"}]},
-        { name : "Amit Pateriya", email :  "amit@gmail.com", address : [{HN : 50, City :"Dewas"}]},
-        { name : "Rakesh Pateriya", email : "rakesh@gmail.com", address : [{HN : 60, City :"KOL"}]},
-    ]
+// import React from 'react';
+// import { Table } from 'react-bootstrap'
+// function App(){
+// const  student = [
+//         { name : "Ashu Pateriya", email : "ashu@gmail.com", address : [{HN : 10, City :"Indore"}]},
+//         { name : "Amit Pateriya", email :  "amit@gmail.com", address : [{HN : 50, City :"Dewas"}]},
+//         { name : "Rakesh Pateriya", email : "rakesh@gmail.com", address : [{HN : 60, City :"KOL"}]},
+//     ]
 
-  return(
-    <div>
-      <h1>Nested List in Array</h1>
-    <Table striped  >
-    <tr>
-      <td>Name</td>
-      <td>Email</td>
-      <td>address</td>
-    </tr>
-    </Table>
-    {
-      student.map((item)=>
-        <tr>
-          <td>{item.name}</td>
-          <td>{item.email}</td>
-        item.address.map((data) =>
-        <Table >
-        <tr>
-          <td>{data.HN}</td>
-          <td>{data.City}</td>
-        </tr>
-=======
-      {/* FOR ARRAY OF OBJECT  */}
-      {
-        student.map((item, index)=>
-       <tr> 
-        <td>{index}={item.name}</td>
-        <td>{index}={item.email}</td>
-       </tr>
->>>>>>> ed5051e (update App)
-        )
-      )
-    }
+//   return(
+//     <div>
+//       <h1>Nested List in Array</h1>
+//     <Table striped  >
+//     <tr>
+//       <td>Name</td>
+//       <td>Email</td>
+//       <td>address</td>
+//     </tr>
+//     </Table>
+//     {
+//       student.map((item)=>
+//         <tr>
+//           <td>{item.name}</td>
+//           <td>{item.email}</td>
+//         item.address.map((data) =>
+//         <Table >
+//         <tr>
+//           <td>{data.HN}</td>
+//           <td>{data.City}</td>
+//         </tr>
 
-    </Table>
-    </div>
-  )
-}
+//       {/* FOR ARRAY OF OBJECT  */}
+//       {
+//         student.map((item, index)=>
+//        <tr> 
+//         <td>{index}={item.name}</td>
+//         <td>{index}={item.email}</td>
+//        </tr>
+
+//         )
+//       )
+//     }
+
+//     </Table>
+//     </div>
+//   )
+// }
 
 export default App;
 
