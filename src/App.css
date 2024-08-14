@@ -1,6 +1,14 @@
 .App {
   text-align: center;
 }
+span {
+padding: 10px;
+background-color: rgb(92, 92, 61);
+font-size: 20px;
+color: #dde5e7;
+margin-bottom: 80px;
+line-height: 60px;
+}
 
 .App-logo {
   height: 40vmin;

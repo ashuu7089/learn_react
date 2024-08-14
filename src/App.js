@@ -1,13 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import User from './User'
-import Profile from './Profile';
-import Doctor from './Doctor';
-import BottleRen from './BottleRen';
-import Login from './Login';
-import PropPass from './PropPass';
-import Member from './Member';
-import RenderLifeCycle from './RenderLifeCycle';
+import logo from "./logo.svg";
+import "./App.css";
+import User from "./User";
+import Profile from "./Profile";
+import Doctor from "./Doctor";
+import BottleRen from "./BottleRen";
+import Login from "./Login";
+import PropPass from "./PropPass";
+import Member from "./Member";
+import RenderLifeCycle from "./RenderLifeCycle";
 
 // function App() {
 //   return (
@@ -65,7 +65,6 @@ import RenderLifeCycle from './RenderLifeCycle';
 // }
 // export default App
 
-
 // LEARN PROPS with functional Component====================== PROPS Function =====================
 
 // import Student from './Student';
@@ -85,15 +84,13 @@ import RenderLifeCycle from './RenderLifeCycle';
 
 // export default App;
 
-
-
 // PROPS with Class COMPONENT ================= Props with class Component========================
 // import PropComponent from './PropComponent';
 // import React from 'react';
 // class App extends React.Component {
 //   constructor(){
 //     super()
-//     this.state = { 
+//     this.state = {
 //       name :"Ravi"
 //     }
 //   }
@@ -106,11 +103,10 @@ import RenderLifeCycle from './RenderLifeCycle';
 //       </div>
 //     );
 //   }
-  
+
 // }
 
 // export default App;
-
 
 // GET input box value ============================= ========GET Input Data ======================
 // import React, {useState} from 'react';
@@ -118,7 +114,7 @@ import RenderLifeCycle from './RenderLifeCycle';
 //   const [data, setData] = useState(null)
 //   const [ show, setShow] = useState(false)
 //   function getData(val){
-   
+
 //     setData(val.target.value);
 //     setShow(false)
 //   }
@@ -128,14 +124,13 @@ import RenderLifeCycle from './RenderLifeCycle';
 //       <h1>{data}</h1> :
 //       null
 //       }
-     
+
 //       <input type='text' onChange={getData}></input>
 //       <button onClick={()=>setShow(true)}> Print Data</button>
 //     </div>
 //   );
 // }
 // export default App;
-
 
 // HIDE, SHOW Element trogle =============================Trogle===============================
 
@@ -176,7 +171,7 @@ import RenderLifeCycle from './RenderLifeCycle';
 //            Select option
 //           </option>
 //           <option>DC Bhai</option>
-//           <option>Disney hotstar</option> 
+//           <option>Disney hotstar</option>
 //         </select> <br /> <br />
 //         <input type='checkbox' onChange={(e)=>setTnc(e.target.checked)}/> <span>Accept Terms and Conditons</span>
 //         <br /> <br />
@@ -195,7 +190,7 @@ import RenderLifeCycle from './RenderLifeCycle';
 //   return (
 //     <div>
 //       <h1>Condition renddering</h1>
-//       <BottleRen /> 
+//       <BottleRen />
 //     </div>
 //   )
 // }
@@ -215,7 +210,6 @@ import RenderLifeCycle from './RenderLifeCycle';
 
 // export default App;
 
-
 // Pass Props as a Function in React ==============================================Pass Props ====================================
 
 // function App(){
@@ -226,7 +220,7 @@ import RenderLifeCycle from './RenderLifeCycle';
 //     <div>
 //       <h1>Pass Props as a Function </h1>
 //       <PropPass data = {getData}/>
-//       <Member data = {getData}/> 
+//       <Member data = {getData}/>
 //     </div>
 //   )
 // }
@@ -254,7 +248,7 @@ import RenderLifeCycle from './RenderLifeCycle';
 //       </div>
 //     )
 //   }
-  
+
 // }
 
 // export default App;
@@ -277,7 +271,6 @@ import RenderLifeCycle from './RenderLifeCycle';
 // COMPONENT DID MOUNT method ===============================================COMPONENT DID MOUNT==========================
 
 // import React, { Component } from 'react';
-
 
 // class App extends Component {
 //   constructor(){
@@ -303,10 +296,8 @@ import RenderLifeCycle from './RenderLifeCycle';
 
 // export default App;
 
-
-
 // COMPONENT DID UPDATE Mount =======================================COMPOUNENT UPDATE Mount==================
-  
+
 /*import React, { Component } from 'react';
   class App extends Component {
     constructor(){
@@ -340,7 +331,6 @@ import RenderLifeCycle from './RenderLifeCycle';
 export default App;
  */
 
-
 // SHOULD COMPONENT UPDATE METHOD in React =================================================SHOULD COMPONENT METHOD===================
 
 /* import React, { Component } from 'react';
@@ -372,7 +362,6 @@ class App extends Component {
 export default App;
 */
 
-
 // COMPONENT WILL UNMOUNT LIFE CYCLE METHOD =====================================UNMOUNT COMPONENT=====================
 
 /* 
@@ -400,7 +389,6 @@ class App extends Component {
 export default App;
 
 */
-
 
 // HOOK IN REACT ========================================================HOOKS =======================
 /*
@@ -478,7 +466,6 @@ function App(){
 export default App;
 */
 
-
 // Handle Array with List =============================================Handle Array ======================
 
 /*
@@ -513,7 +500,7 @@ export default App;
 //       {/* FOR ARRAY OF OBJECT  */}
 //       {
 //         student.map((item, index)=>
-//        <tr key={index}> 
+//        <tr key={index}>
 //         <td>{item.name}</td>
 //         <td>{item.email}</td>
 //        </tr>
@@ -534,7 +521,7 @@ export default App;
 // import React from 'react';
 // import { Table } from 'react-bootstrap'
 // function App(){
- 
+
 //   let student = [
 //       { name : "Ashu Pateriya", email : "ashu@gmail.com"},
 //       { name : "Amit Pateriya", email :  "amit@gmail.com"},
@@ -566,56 +553,118 @@ export default App;
 
 // export default App;
 
-
 // NESTED LIST IN REACT =======================================================NESTED LIST======================================
 
-// import React from 'react';
-// import { Table } from 'react-bootstrap'
-// function App(){
-// const  student = [
-//         { name : "Ashu Pateriya", email : "ashu@gmail.com", address : [{HN : 10, City :"Indore"}]},
-//         { name : "Amit Pateriya", email :  "amit@gmail.com", address : [{HN : 50, City :"Dewas"}]},
-//         { name : "Rakesh Pateriya", email : "rakesh@gmail.com", address : [{HN : 60, City :"KOL"}]},
-//     ]
+// import React from "react";
+// import { Table } from "react-bootstrap";
+// function App() {
+//   const student = [
+//     {
+//       name: "Ashu Pateriya",
+//       email: "ashu@gmail.com",
+//       address: [{ HN: 10, City: "Indore" }
+//         ,{ HN: 100, City: "Indore" },
+//         { HN: 101, City: "Indore" },
+//         { HN: 120, City: "Indore" }
+//       ],
+//     },
+//     {
+//       name: "Amit Pateriya",
+//       email: "amit@gmail.com",
+//       address: [{  HN: 10, City: "Indore" }
+//         ,{ HN: 100, City: "Indore" },
+//         { HN: 101, City: "Indore" },
+//         { HN: 120, City: "Indore" }],
+//     },
+//     {
+//       name: "Rakesh Pateriya",
+//       email: "rakesh@gmail.com",
+//       address: [{  HN: 10, City: "Indore" }
+//         ,{ HN: 100, City: "Indore" },
+//         { HN: 101, City: "Indore" },
+//         { HN: 120, City: "Indore" }],
+//     },
+//   ];
 
-//   return(
+//   return (
 //     <div>
 //       <h1>Nested List in Array</h1>
-//     <Table striped  >
-//     <tr>
-//       <td>Name</td>
-//       <td>Email</td>
-//       <td>address</td>
-//     </tr>
-//     </Table>
-//     {
-//       student.map((item)=>
-//         <tr>
+//       <Table striped>
+//         <tbody>
+//           <tr>
+//             <td>S.No</td>
+//             <td>Name</td>
+//             <td>Email</td>
+//             <td>address</td>
+//           </tr>
+//       {student.map((item, index) => (
+//         <tr key={index}>
+//           <td>{index +1}</td>
 //           <td>{item.name}</td>
 //           <td>{item.email}</td>
-//         item.address.map((data) =>
-//         <Table >
-//         <tr>
-//           <td>{data.HN}</td>
-//           <td>{data.City}</td>
+//           <td>
+//             <Table striped>
+//               <tbody>
+//                 {item.address.map((data, index) => (
+//                   <tr key={index}>
+//                     <td>{data.HN}</td>
+//                     <td>{data.City}</td>
+//                   </tr>
+//                 ))}
+//               </tbody>
+//             </Table>
+//           </td>
 //         </tr>
+//       ))}
+//       </tbody>
+//       </Table>
+//     </div>
+//   );
+// }
 
-//       {/* FOR ARRAY OF OBJECT  */}
+// export default App;
+
+
+
+// REUSE COMPONENT IN REACT====================================================REUSE COMPONENT==================================
+
+// import React from "react";
+// import UsersReuse from "./UsersReuse";
+
+// function App(){
+//   let student = [
+//           { name : "Ashu Pateriya", email : "ashu@gmail.com"},
+//           { name : "Amit Pateriya", email :  "amit@gmail.com"},
+//           { name : "Rakesh Pateriya", email : "rakesh@gmail.com"},
+//       ]
+//   return (
+//     <div>
+//       <h1>Reuse component in react</h1>
 //       {
-//         student.map((item, index)=>
-//        <tr> 
-//         <td>{index}={item.name}</td>
-//         <td>{index}={item.email}</td>
-//        </tr>
-
+//         student.map((item)=>
+//           <UsersReuse data ={item} />
 //         )
-//       )
-//     }
-
-//     </Table>
+//       }
 //     </div>
 //   )
 // }
 
-export default App;
+// export default App;
 
+// 
+
+// FRAGMENT in React ==============================================FRAGMENT ========================================
+
+import React, {Fragment} from "react";
+
+function App(){
+
+  return (
+    <Fragment>
+      <h1>Hello Qura</h1>
+      <h1>Welcome to the team bro</h1>
+    </Fragment>
+  )
+}
+ /* We Fragment for handle div problem come after we managed two h1 tag */
+export default App;
