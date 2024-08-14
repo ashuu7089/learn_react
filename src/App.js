@@ -655,7 +655,7 @@ export default App;
 
 // FRAGMENT in React ==============================================FRAGMENT ========================================
 
-import React, {Fragment} from "react";
+/*import React, {Fragment} from "react";
 
 function App(){
 
@@ -667,4 +667,45 @@ function App(){
   )
 }
  /* We Fragment for handle div problem come after we managed two h1 tag */
+
+// LIFTING State in REACT ======================================== LIFTING STATE ==================================
+// When  send Data child to parent component in react
+
+// This process is Parent to child data send
+/*import React from "react";
+import ChildComponent from "./ChildComponent";
+function App(){
+  let data = "Parent Pass"
+
+  return(
+    <>
+    <h1>Lifting State in React</h1>
+    < ChildComponent name = {data} />
+    </>
+  )
+}
+
+
 export default App;
+*/
+
+// Child to parent data send
+import React from "react";
+import ChildComponent from "./ChildComponent";
+function App(){
+  
+  function ParentAlert(data){
+    alert(data)
+  }
+
+  return(
+    <>
+    <h1>Lifting State in React</h1>
+    < ChildComponent alert = {ParentAlert} />
+    </>
+  )
+}
+
+
+export default App;
+
