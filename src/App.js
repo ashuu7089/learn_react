@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import User from "./User";
+//  
 import Profile from "./Profile";
 import Doctor from "./Doctor";
 import BottleRen from "./BottleRen";
@@ -690,6 +690,7 @@ export default App;
 */
 
 // Child to parent data send
+/*
 import React from "react";
 import ChildComponent from "./ChildComponent";
 function App(){
@@ -709,3 +710,229 @@ function App(){
 
 export default App;
 
+*/
+
+
+// USEMEMO in REACT ============================================== useMemo =========================
+/*import React,{useState, useMemo} from "react";
+
+function App(){
+  const [count, setCount] = useState(0)
+  const [item, setItem] = useState(10)
+const multiCountMemo = useMemo(()=>{
+  console.log("multiCount");
+  return count * 5;
+},[count])
+
+  return (
+    <>
+    <h1>Use Memo in React </h1>
+    <h3>Count : {count}</h3>
+    <h3>Items : {item}</h3>
+    <h4>{multiCountMemo}</h4> 
+    <button onClick={()=>setCount(count+1)}>Click Me!</button>
+    <button onClick={()=>setItem(item*10)}>Click Item</button>
+    </>
+  )
+}
+
+export default App;
+*/
+
+// Ref in React it is used in class based component =====================================Ref=========
+
+/*import React,{ Component, createRef } from "react";
+
+class App extends Component {
+  constructor(){
+    super()
+    this.inputRef = createRef();
+  }
+  componentDidMount(){
+    console.log("object", this.inputRef.current.value = "Ashu Pateriya");
+  }
+    getValue(){
+      console.log(this.inputRef.current.value);
+      this.inputRef.current.style.color = "yellow"
+      this.inputRef.current.style.backgroundColor = "gray"
+    }
+  
+  render(){
+    return (
+      <>
+      <h1>Ref with class Component</h1>
+      <input type="text" ref={this.inputRef}/>
+      <button onClick={()=>this.getValue()}>Check Ref</button>
+      </>
+    )
+  }
+}
+
+export default App;
+
+*/
+
+
+//  useRef in react=======================================useRef===============================
+/*import React,{ useRef} from "react";
+
+function App(){
+  let inputVal = useRef(null);
+  function handleButton(){
+console.log("text");
+// inputVal.current.value = "Ashu Pateriya"
+// inputVal.current.focus()
+    inputVal.current.style.color = "red"
+    inputVal.current.style.backgroundColor = "purple"
+    inputVal.current.style.display = 'none'
+}
+  return (
+    <>
+    <h1>useRef in React</h1>
+    <input type="text" ref={inputVal} />
+    <button onClick={handleButton()}>Click Me!</button>
+    </>
+  )
+}
+
+export default App; 
+*/
+
+// useForward in react ===============================useForward=============================
+
+/*import React, {useRef} from "react";
+import User from './UseRefernce';
+function App(){
+  let inputRef = useRef(null);
+  function updateData (){
+    inputRef.current.value = 'Ashutosh pateriya'
+    inputRef.current.style.color="red"
+    inputRef.current.focus()
+
+  }
+  return (
+    <>
+    <h1>useForward in React</h1>
+    <User ref = {inputRef} />
+    <button onClick={updateData}>Click me</button>
+    </>
+  )
+}
+
+export default App;
+
+*/
+// Controller Component in react ========================Controller Component====================
+
+/* import React, {useState} from "react";
+
+function App(){
+  const [data, setData ] = useState("123")
+  return (
+    <>
+    <input type="text" data = {data} onChange={(e)=> setData(e.target.value)} />
+    <h3> Value :{data}</h3>
+    </>
+  )
+}
+
+export default App;
+*/
+
+
+// Uuncontroller compounent ===============================Uncontroller Compounent ================
+
+/* import React, {useRef} from "react";
+
+function App (){
+  const inputRef = useRef(null)
+  const inputRef2 = useRef(null)
+  function updateValue(e){
+    e.preventDefault()
+    console.log("input ref", inputRef.current.value);
+    const inputData = document.getElementById('input3').value;
+    console.log("inputData", inputData);
+  }
+return (
+  <>
+    <form onSubmit={updateValue}>
+      <input type="text" ref={inputRef} /> <br/><br/>
+      <input type="text" ref={inputRef2} /> <br/><br/>
+      <input id = "input3" type="text" /> <br/><br/>
+      <button >Update value</button>
+    </form>
+  </>
+)
+}
+
+export default App;
+*/
+
+
+// High Order component ====================================HOC ==============================
+/*
+import React, { useState} from "react";
+
+
+function App(){
+
+  return (
+    <>
+      <h3>High Order Component</h3>
+      <Hoc cmd = {Counter}/>
+      <HocRed  cmd = {Counter}/>
+      <HocGreen cmd = {Counter}/>
+      
+    </>
+  )
+}
+
+function Hoc(props){
+  return (
+    <>
+    <h2 style={{backgroundColor: "red", width:150}}>Red <props.cmd/></h2>
+    </>
+  )
+}
+function HocRed(props){
+  return <h2 style={{backgroundColor: "blue", width:150}}>Blue < props.cmd/></h2>
+}
+function HocGreen(props){
+  return <h2 style={{backgroundColor:"green", width:150}}>Green < props.cmd/></h2>
+}
+
+function Counter(){
+  const [ item, setItem ] = useState(0)
+  return (
+    <>
+    <h1>count : {item}</h1>
+    <button onClick={()=> setItem(item + 1)}>Update count</button>
+    </>
+  )
+}
+
+export default App;
+
+*/
+
+// React Route in react ============================================= REACT ROUTE =================
+
+import React from "react";
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+function App(){
+  return(
+    <>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element= { <Home /> } ></Route>
+        <Route path="/about" element= { <About /> } ></Route>
+
+      </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
+
+export default App;
