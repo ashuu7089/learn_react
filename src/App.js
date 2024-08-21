@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import "./App.css";
+
 //  
 import Profile from "./Profile";
 import Doctor from "./Doctor";
@@ -917,6 +917,7 @@ export default App;
 
 // React Route in react ============================================= REACT ROUTE =================
 
+/*
 import React from "react";
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import Home from './Components/Home';
@@ -931,6 +932,32 @@ function App(){
 
       </Routes>
       </BrowserRouter>
+    </>
+  )
+}
+
+export default App;
+*/
+
+// ================================== 404 React Router =========================================
+import { BrowserRouter, Route, Router, Routes, Navigate } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+import Contact from "./Components/Contact";
+import UserProfile from "./Components/UserProfile";
+import Navbar from "./Components/Navbar";
+function App(){
+  return (
+    <>
+    <BrowserRouter>
+    <Navbar />
+    <Routes>
+      <Route path="/" element = {<Home />}></Route>
+      <Route path="/about" element = {<About />}></Route>
+      <Route path="/*" element = {<Navigate to='/' />}></Route>
+      <Route path="/user/:name" element = { <UserProfile />}></Route>
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
